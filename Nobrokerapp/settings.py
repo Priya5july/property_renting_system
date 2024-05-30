@@ -53,6 +53,51 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
+
+
+CORS_ALLOW_ALL_ORIGINS = False
+#CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS').split(',')
+
+
+
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'client-secret',
+    'client-name',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    'user-type',
+    'platform',
+    'user-type',
+    'device',
+    'device_name',
+    'device_id',
+    'imei',
+    'os',
+    'os_name',
+    'appVersion',
+    'version'
+]
+CORS_ALLOW_CREDENTIALS = True
+
+
+
+
 ROOT_URLCONF = 'Nobrokerapp.urls'
 
 TEMPLATES = [
